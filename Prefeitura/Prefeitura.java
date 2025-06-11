@@ -24,6 +24,11 @@ public class Prefeitura
         this.desconto2 = desconto2;
     }
 
+    public void adicionarResponsavel(Responsavel responsavel){
+        if(listaResponsaveis.contains(responsavel)) return;
+        listaResponsaveis.add(responsavel);
+    }
+
     public double calcularComDesconto(Imovel imovel)
     {
         Responsavel responsavel = imovel.getResponsavel();
