@@ -1,50 +1,15 @@
 package Responsavel;
 
-/**
- * Write a description of class Responsavel here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Responsavel
-{
-    // instance variables - replace the example below with your own
-    private int idade;
-    private String nome;
-    private String cpf;
-
-    /**
-     * Constructor for objects of class Responsavel
-     */
-    public Responsavel(String nome, String cpf, int idade)
-    {
-        // initialise instance variables
+public class Responsavel {
+    protected String nome;
+    
+    public Responsavel(String nome) {
         this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int getIdade()
-    {
-        // put your code here
-        return this.idade;
-    }
+    public abstract String gerarDocumento();
     
-    public String getCPF()
-    {
-        // put your code here
-        return this.cpf;
-    }
-    
-    public String getNome()
-    {
-        // put your code here
+    public String getNome() {
         return this.nome;
     }
 }
