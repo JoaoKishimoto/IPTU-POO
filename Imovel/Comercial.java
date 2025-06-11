@@ -1,12 +1,12 @@
 package Imovel;
 
-import Responsavel.Responsavel;
+import Responsavel.PessoaJuridica;
 
 public class Comercial extends Imovel{
 
     private double areaConstruida;
     
-    public Comercial(Responsavel responsavel, Endereco endereco, double areaCasa, double areaConstruida, double valorDeAvaliacao) {
+    public Comercial(PessoaJuridica responsavel, Endereco endereco, double areaCasa, double areaConstruida, double valorDeAvaliacao) {
         super(responsavel, valorDeAvaliacao, endereco);
         this.areaConstruida = areaConstruida;
     }

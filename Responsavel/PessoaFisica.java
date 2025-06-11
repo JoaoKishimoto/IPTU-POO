@@ -1,5 +1,7 @@
 package Responsavel;
 
+import Imovel.Imovel;
+
 public class PessoaFisica extends Responsavel {
     private int idade;
 
@@ -24,8 +26,14 @@ public class PessoaFisica extends Responsavel {
         this.documento = cpf;
     }
 
+    public double calcularDesconto(Imovel imovel, int idade1, int idade2, float porcentagemDesconto1, float porcentagemDesconto2) {
+        if (idade > idade2) return imovel.calcularIPTU()*(1 - porcentagemDesconto1);
+        if (idade > idade1) return imovel.calcularIPTU()*(1 - porcentagemDesconto2);
+        return imovel.calcularIPTU();
+    }
+
     @Override
     public String toString() {
-        return "Pessoa Física: " + this.getNome() + ", CPF: " + this.getDocumento() + ", Documento: " + this.getDocumento();
+        return "nome: " + this.nome + "CPF: " + this.getDocumento() + "Idade: " + this.idade;
     }
 }

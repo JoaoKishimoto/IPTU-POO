@@ -5,7 +5,7 @@ import java.util.Scanner;
 import Prefeitura.Prefeitura;
 
 public class UI {
-    public static void main(String[] args) {
+    public static void startUI() {
         try (Scanner scanner = new Scanner(System.in)) {
             int choice = 0;
             
@@ -25,15 +25,15 @@ public class UI {
                 switch (choice) {
                     case 1 -> {
                         clearScreen();
-                        Responsaveis.MostrarMenuResponsaveis();
+                        Responsaveis.startMenu(scanner, prefeitura);
                     }
                     case 2 -> {
                         clearScreen();
-                        Imoveis.MostrarMenuImoveis();
+                        Imoveis.startMenu(scanner, prefeitura);
                     }
                     case 3 -> {
                         clearScreen();
-                        prefeitura.mostrarIPTUs();
+                        PrefeituraUI.startMenu(scanner, prefeitura);
                     }
                     case 4 -> {
                         clearScreen();

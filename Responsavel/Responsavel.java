@@ -1,5 +1,7 @@
 package Responsavel;
 
+import Imovel.Imovel;
+
 public abstract class Responsavel
 {
     protected String nome;
@@ -22,4 +24,8 @@ public abstract class Responsavel
         // put your code here
         return this.nome;
     }
+
+    public abstract double calcularDesconto(Imovel imovel, int idade1, int idade2, float porcentagemDesconto1, float porcentagemDesconto2);
+
+    public abstract String toString();
 }

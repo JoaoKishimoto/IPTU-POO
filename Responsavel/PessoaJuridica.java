@@ -1,5 +1,7 @@
 package Responsavel;
 
+import Imovel.Imovel;
+
 public class PessoaJuridica extends Responsavel {
     private int anoDeFundacao;
 
@@ -24,8 +26,12 @@ public class PessoaJuridica extends Responsavel {
         this.documento = cpf;
     }
 
+    public double calcularDesconto(Imovel imovel, int idade1, int idade2, float porcentagemDesconto1, float porcentagemDesconto2) {
+        return imovel.calcularIPTU();
+    }
+
     @Override
     public String toString() {
-        return "Pessoa Física: " + this.getNome() + ", CPF: " + this.getDocumento() + ", Documento: " + this.getDocumento();
+        return "Nome: " + this.nome + "CNPJ: " + this.getDocumento() + "Ano de fundação: " + this.anoDeFundacao;
     }
 }
