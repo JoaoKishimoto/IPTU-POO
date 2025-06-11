@@ -12,11 +12,12 @@ public class Responsavel
     private int idade;
     private String nome;
     private String cpf;
+    private String cnpj;
 
     /**
      * Constructor for objects of class Responsavel
      */
-    public Responsavel(String nome, String cpf, int idade)
+    public Responsavel(String nome, String documento, int idade)
     {
         // initialise instance variables
         this.nome = nome;
