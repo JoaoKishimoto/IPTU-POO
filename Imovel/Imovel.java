@@ -22,4 +22,6 @@ public abstract class Imovel {
     public Responsavel getResponsavel() { return this.responsavel; }
     
     public void setResponsavel(Responsavel responsavel) { this.responsavel = responsavel; }
+
 }
+    

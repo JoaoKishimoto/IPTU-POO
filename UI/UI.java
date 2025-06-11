@@ -42,6 +42,7 @@ public class UI {
                     }
                     default -> throw new AssertionError();
                 }
+                default -> throw new AssertionError();
             }
         }
     }

@@ -1,7 +1,6 @@
 package UI;
 
 import java.util.Scanner;
-
 import Responsavel.PessoaFisica;
 import Responsavel.Responsavel;
 
