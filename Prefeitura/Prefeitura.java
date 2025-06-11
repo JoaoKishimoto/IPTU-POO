@@ -82,4 +82,12 @@ public class Prefeitura
     public Responsavel buscarResponsavel(Imovel imovel) {
         return this.listaImoveis.get(imovel);        
     }
+
+    public ArrayList<Responsavel> getListaResponsaveis() {
+        return this.listaResponsaveis;
+    }
+
+    public Responsavel buscarResponsavel(Imovel imovel) {
+        return this.listaImoveis.get(imovel);        
+    }
 }
