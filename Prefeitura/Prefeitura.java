@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 public class Prefeitura
 {
-    // instance variables - replace the example below with your own
     private HashMap<Imovel, Responsavel> listaImoveis = new HashMap<Imovel, Responsavel>();
     private List<Responsavel> listaResponsaveis = new ArrayList<>();
     private int idadeMinima1;
@@ -73,7 +72,10 @@ public class Prefeitura
     }
 
     public void mostrarIPTUs() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'mostrarIPTUs'");
+    }
+
+    public Responsavel buscarResponsavel(Imovel imovel) {
+        return this.listaImoveis.get(imovel);        
     }
 }
