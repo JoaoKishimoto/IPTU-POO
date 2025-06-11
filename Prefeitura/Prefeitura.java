@@ -1,6 +1,5 @@
 package Prefeitura;
 
-import java.util.List;
 
 import Imovel.Imovel;
 import Responsavel.Responsavel;
@@ -10,9 +9,8 @@ import java.util.HashMap;
 
 public class Prefeitura
 {
-    // instance variables - replace the example below with your own
     private HashMap<Imovel, Responsavel> listaImoveis = new HashMap<Imovel, Responsavel>();
-    private List<Responsavel> listaResponsaveis = new ArrayList<>();
+    private ArrayList<Responsavel> listaResponsaveis = new ArrayList<Responsavel>();
     private int idadeMinima1;
     private int idadeMinima2;
     private double desconto1;
@@ -77,8 +75,15 @@ public class Prefeitura
         this.idadeMinima2 = idadeMinima2;
     }
 
-    public void mostrarIPTUs() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mostrarIPTUs'");
+    public HashMap<Imovel, Responsavel> getListaImoveis() {
+        return this.listaImoveis;
+    }
+
+    public ArrayList<Responsavel> getListaResponsaveis() {
+        return this.listaResponsaveis;
+    }
+
+    public Responsavel buscarResponsavel(Imovel imovel) {
+        return this.listaImoveis.get(imovel);        
     }
 }
