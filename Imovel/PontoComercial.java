@@ -1,11 +1,11 @@
 package Imovel;
 
-import Responsavel.Responsavel;
+import Responsavel.PessoaJuridica;
 
 public class PontoComercial extends Imovel {
   protected double areaConstruida;
 
-  public PontoComercial(Responsavel responsavel, double valorDeAvaliacao, Endereco endereco, double areaConstruida) {
+  public PontoComercial(PessoaJuridica responsavel, double valorDeAvaliacao, Endereco endereco, double areaConstruida) {
     super(responsavel, valorDeAvaliacao, endereco);
     this.areaConstruida = areaConstruida;
   }
