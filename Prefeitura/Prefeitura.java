@@ -32,11 +32,7 @@ public class Prefeitura
     public double calcularComDesconto(Imovel imovel)
     {
         Responsavel responsavel = imovel.getResponsavel();
-        int idade = responsavel.getIdade();
-        
-        if(idade > idadeMinima2) return calcularIPTU(imovel)*(1-desconto2);
-        if(idade > idadeMinima1) return calcularIPTU(imovel)*(1-desconto1);
-        return calcularIPTU(imovel);
+        return responsavel.calcularDesconto(imovel, idadeMinima1, idadeMinima1, idadeMinima2, idadeMinima1);
     }
     
     public double calcularIPTU(Imovel imovel){
@@ -77,6 +73,14 @@ public class Prefeitura
 
     public HashMap<Imovel, Responsavel> getListaImoveis() {
         return this.listaImoveis;
+    }
+
+    public ArrayList<Responsavel> getListaResponsaveis() {
+        return this.listaResponsaveis;
+    }
+
+    public Responsavel buscarResponsavel(Imovel imovel) {
+        return this.listaImoveis.get(imovel);        
     }
 
     public ArrayList<Responsavel> getListaResponsaveis() {

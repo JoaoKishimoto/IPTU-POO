@@ -1,9 +1,10 @@
 package UI;
 
 import java.util.Scanner;
+
 import Prefeitura.Prefeitura;
 
-public class Imoveis {
+public class PrefeituraUI {
     public static void startMenu(Scanner scanner, Prefeitura prefeitura) {
         int choice = 0;
         
@@ -25,6 +26,7 @@ public class Imoveis {
                 }
                 case 2 -> {
                     UI.clearScreen();
+                    
                 }
                 case 3 -> {
                     UI.clearScreen();

@@ -1,45 +1,22 @@
 package Responsavel;
 
-/**
- * Write a description of class Responsavel here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Responsavel
+import Imovel.Imovel;
+
+public abstract class Responsavel
 {
-    // instance variables - replace the example below with your own
-    private int idade;
-    private String nome;
-    private String cpf;
+    protected String nome;
+    protected String documento;
 
-    /**
-     * Constructor for objects of class Responsavel
-     */
-    public Responsavel(String nome, String cpf, int idade)
+    public Responsavel(String nome, String documento)
     {
-        // initialise instance variables
         this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int getIdade()
-    {
-        // put your code here
-        return this.idade;
+        this.documento = documento;
     }
     
-    public String getCPF()
+    public String getDocumento()
     {
         // put your code here
-        return this.cpf;
+        return this.documento;
     }
     
     public String getNome()
@@ -47,4 +24,8 @@ public class Responsavel
         // put your code here
         return this.nome;
     }
+
+    public abstract double calcularDesconto(Imovel imovel, int idade1, int idade2, float porcentagemDesconto1, float porcentagemDesconto2);
+
+    public abstract String toString();
 }
