@@ -9,7 +9,6 @@ import java.util.HashMap;
 
 public class Prefeitura
 {
-    // instance variables - replace the example below with your own
     private HashMap<Imovel, Responsavel> listaImoveis = new HashMap<Imovel, Responsavel>();
     private ArrayList<Responsavel> listaResponsaveis = new ArrayList<Responsavel>();
     private int idadeMinima1;
@@ -77,5 +76,9 @@ public class Prefeitura
 
     public ArrayList<Responsavel> getListaResponsaveis() {
         return this.listaResponsaveis;
+    }
+
+    public Responsavel buscarResponsavel(Imovel imovel) {
+        return this.listaImoveis.get(imovel);        
     }
 }
