@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Imoveis {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public static void MostrarMenuImoveis(Scanner scanner) {
         int choice = 0;
         
@@ -36,6 +37,8 @@ public class Imoveis {
         }
         return;
 =======
+=======
+>>>>>>> Stashed changes
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             int choice = 0;
@@ -64,6 +67,9 @@ public class Imoveis {
                 }
             }
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }
