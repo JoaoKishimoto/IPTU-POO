@@ -18,8 +18,9 @@ public class PessoaFisica extends Responsavel {
         this.idade = idade;
     }
 
-    public String getCPF() {
-        return this.documento.replaceAll("(\\d{2})(\\d{3})(\\d{3})(\\d{4})(\\d{2})", "$1.$2.$3-$4");
+    @Override
+    public String getDocumento() {
+        return this.documento.replaceAll("(\\d{3})(\\d{3})(\\d{3})(\\d{2})", "$1.$2.$3-$4");
     }
 
     public void setCPF(String cpf) {
@@ -34,6 +35,6 @@ public class PessoaFisica extends Responsavel {
 
     @Override
     public String toString() {
-        return "nome: " + this.nome + "CPF: " + this.getDocumento() + "Idade: " + this.idade;
+        return "nome: " + this.nome + " CPF: " + this.getDocumento() + " Idade: " + this.idade;
     }
 }

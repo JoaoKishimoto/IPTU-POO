@@ -13,12 +13,8 @@ public abstract class Responsavel
         this.documento = documento;
     }
     
-    public String getDocumento()
-    {
-        // put your code here
-        return this.documento;
-    }
-    
+    public abstract String getDocumento();
+        
     public String getNome()
     {
         // put your code here
