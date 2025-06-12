@@ -23,5 +23,6 @@ public abstract class Imovel {
     
     public void setResponsavel(Responsavel responsavel) { this.responsavel = responsavel; }
 
+    // TODO: ToString()
 }
     
