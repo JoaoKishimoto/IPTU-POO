@@ -82,4 +82,8 @@ public class Prefeitura
     public Responsavel buscarResponsavel(Imovel imovel) {
         return this.listaImoveis.get(imovel);        
     }
+
+    public void adicionarImovel(Imovel imovel) {
+        listaImoveis.put(imovel, imovel.getResponsavel());
+    }
 }
