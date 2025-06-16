@@ -19,10 +19,13 @@ public abstract class Imovel {
         return this.calcularIPTU() * porcentagemDesconto;
     }
     
-    public Responsavel getResponsavel() { return this.responsavel; }
+    public Responsavel getResponsavel() { 
+        return this.responsavel;
+    }
     
     public void setResponsavel(Responsavel responsavel) { this.responsavel = responsavel; }
 
-    // TODO: ToString()
+    @Override
+    public abstract String toString();
 }
     

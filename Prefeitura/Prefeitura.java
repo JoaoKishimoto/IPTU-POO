@@ -4,8 +4,11 @@ package Prefeitura;
 import Imovel.Imovel;
 import Responsavel.Responsavel;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 
 public class Prefeitura
 {
@@ -27,6 +30,19 @@ public class Prefeitura
     public void adicionarResponsavel(Responsavel responsavel){
         if(listaResponsaveis.contains(responsavel)) return;
         listaResponsaveis.add(responsavel);
+    }
+
+    public void listarIPTUs() {
+        Locale brasil = Locale.of("pt", "BR");
+        NumberFormat formatoMoeda = NumberFormat.getCurrencyInstance(brasil);
+        
+        for (Map.Entry<Imovel, Responsavel> entry : listaImoveis.entrySet()) {
+            Responsavel responsavel = entry.getValue();
+            Imovel imovel = entry.getKey();
+
+            double iptu = responsavel.calcularDesconto(imovel, this.idadeMinima1, this.idadeMinima2, this.desconto1, this.desconto2);
+            System.out.println("Responsável: " + responsavel.getNome() + ", IPTU: " + formatoMoeda.format(iptu));
+        }
     }
 
     public double calcularComDesconto(Imovel imovel)

@@ -27,13 +27,13 @@ public class PessoaJuridica extends Responsavel {
     public void setCPF(String cpf) {
         this.documento = cpf;
     }
-
-    public double calcularDesconto(Imovel imovel, int idade1, int idade2, float porcentagemDesconto1, float porcentagemDesconto2) {
+    @Override
+    public double calcularDesconto(Imovel imovel, int idade1, int idade2, double porcentagemDesconto1, double porcentagemDesconto2) {
         return imovel.calcularIPTU();
     }
 
     @Override
     public String toString() {
-        return "Nome: " + this.nome + " CNPJ: " + this.getDocumento() + " Ano de fundação: " + this.anoDeFundacao;
+        return "Nome: " + this.nome + " CNPJ: " + this.getDocumento() + " Ano de fundação: " + this.anoDeFundacao + " Tipo: " + this.getClass().getSimpleName();
     }
 }

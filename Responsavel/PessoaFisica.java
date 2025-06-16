@@ -27,14 +27,15 @@ public class PessoaFisica extends Responsavel {
         this.documento = cpf;
     }
 
-    public double calcularDesconto(Imovel imovel, int idade1, int idade2, float porcentagemDesconto1, float porcentagemDesconto2) {
-        if (idade > idade2) return imovel.calcularIPTU()*(1 - porcentagemDesconto1);
-        if (idade > idade1) return imovel.calcularIPTU()*(1 - porcentagemDesconto2);
+    @Override
+    public double calcularDesconto(Imovel imovel, int idade1, int idade2, double porcentagemDesconto1, double porcentagemDesconto2) {
+        if (idade >= idade2) return imovel.calcularIPTU()*(1 - porcentagemDesconto2);
+        if (idade >= idade1) return imovel.calcularIPTU()*(1 - porcentagemDesconto1);
         return imovel.calcularIPTU();
     }
 
     @Override
     public String toString() {
-        return "nome: " + this.nome + " CPF: " + this.getDocumento() + " Idade: " + this.idade;
+        return "nome: " + this.nome + " CPF: " + this.getDocumento() + " Idade: " + this.idade + " Tipo: " + this.getClass().getSimpleName();
     }
 }

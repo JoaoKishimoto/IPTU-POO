@@ -20,28 +20,15 @@ public class Responsaveis {
             System.out.println("3. Voltar ao menu principal");
             System.out.print("Escolha uma opção: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character left by nextInt()
+            scanner.nextLine();
             
             switch (choice) {
                 case 1 -> {
                     UI.clearScreen();
-                    System.out.println("---- Cadastrar Responsável ----");
+                    registerResponsavel(scanner, prefeitura);
                     
-                    System.out.println("Qual o tipo de responsável?");
-                    System.out.println("1. Pessoa Física");
-                    System.out.println("2. Pessoa Jurídica");
-
-                    int tipo = scanner.nextInt();
-                    scanner.nextLine(); // Consume the newline character left by nextInt()
-
-                    if (tipo == 1) {
-                        registerPessoaFisica(scanner, prefeitura);
-                    } else if (tipo == 2) {
-                        registerPessoaJuridica(scanner, prefeitura);
-                    } else {
-                        System.out.println("Opção inválida. Tente novamente.");
-                    }
-
+                    System.out.println("\nPressione Enter para continuar...");
+                    scanner.nextLine();
                     return;
                 }
                 case 2 -> {
@@ -66,7 +53,30 @@ public class Responsaveis {
         }
     }
 
+    public static void registerResponsavel(Scanner scanner, Prefeitura prefeitura) {
+        UI.clearScreen();
+        System.out.println("---- Cadastrar Responsável ----");
+        
+        System.out.println("Qual o tipo de responsável?");
+        System.out.println("1. Pessoa Física");
+        System.out.println("2. Pessoa Jurídica");
+
+        int tipo = scanner.nextInt();
+        scanner.nextLine();
+
+        if (tipo == 1) {
+            registerPessoaFisica(scanner, prefeitura);
+        } else if (tipo == 2) {
+            registerPessoaJuridica(scanner, prefeitura);
+        } else {
+            System.out.println("Opção inválida. Tente novamente.");
+        }
+
+        scanner.nextLine();
+    }
+
     public static void registerPessoaFisica(Scanner scanner, Prefeitura prefeitura) {
+        UI.clearScreen();
         System.out.println("---- Cadastrar Pessoa Física ----");
         
         System.out.println("Qual o nome do Responsável?");
@@ -83,6 +93,7 @@ public class Responsaveis {
     }
 
     public static void registerPessoaJuridica(Scanner scanner, Prefeitura prefeitura) {
+        UI.clearScreen();
         System.out.println("---- Cadastrar Pessoa Jurídica ----");
         
         System.out.println("Qual o nome do Responsável?");
