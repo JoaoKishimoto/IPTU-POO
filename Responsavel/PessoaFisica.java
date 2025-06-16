@@ -29,8 +29,8 @@ public class PessoaFisica extends Responsavel {
 
     @Override
     public double calcularDesconto(Imovel imovel, int idade1, int idade2, double porcentagemDesconto1, double porcentagemDesconto2) {
-        if (idade >= idade2) return imovel.calcularIPTU()*(1 - porcentagemDesconto2);
-        if (idade >= idade1) return imovel.calcularIPTU()*(1 - porcentagemDesconto1);
+        if (idade >= idade2) return imovel.calcularIPTU() * (1 - imovel.calcularDesconto(porcentagemDesconto2));
+        if (idade >= idade1) return imovel.calcularIPTU() * (1 - imovel.calcularDesconto(porcentagemDesconto1));
         return imovel.calcularIPTU();
     }
 
