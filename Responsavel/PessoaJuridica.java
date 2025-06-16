@@ -27,6 +27,7 @@ public class PessoaJuridica extends Responsavel {
     public void setCPF(String cpf) {
         this.documento = cpf;
     }
+    
     @Override
     public double calcularDesconto(Imovel imovel, int idade1, int idade2, double porcentagemDesconto1, double porcentagemDesconto2) {
         return imovel.calcularIPTU();
